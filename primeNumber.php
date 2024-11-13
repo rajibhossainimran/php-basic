@@ -16,10 +16,7 @@ function isPrime($number) {
 }
 
 // Example usage
-$number = 30;
-if (isPrime($number)) {
-    echo "$number is a prime number.";
-} else {
-    echo "$number is not a prime number.";
-}
+$number = 21;
+echo isPrime($number) ? "$number is a prime number." : "$number is not a prime number.";
+
 ?>
