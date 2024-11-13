@@ -25,5 +25,6 @@ echo "<br>";
 // slice text using substr() method 
 $text = 'my name is md';
 echo substr($text,4,5);
+echo '<br>'
 
 ?>
