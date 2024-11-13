@@ -1,22 +1,20 @@
 <?php
-function isPrime($number) {
-    // Check if number is less than 2 (not prime)
+$number = 4978937598374957349857;
+$count = 0;
     if ($number <= 1) {
-        return false;
+        echo "$number not prime not composit";
     }
-
-    // Check divisibility from 2 to the number-1
     for ($i = 2; $i < $number; $i++) {
         if ($number % $i == 0) {
-            return false; // If divisible, it's not prime
+            $count++;
+            break;
         }
     }
 
-    return true; // If no divisors were found, it's prime
+if($count==0){
+    echo "$number this is prime number";
+}else{
+    echo "$number this is not a prime number";;
 }
-
-// Example usage
-$number = 21;
-echo isPrime($number) ? "$number is a prime number." : "$number is not a prime number.";
 
 ?>
