@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+            background-color: teal;
+
+        }
+
+        #name {
+            width: 400px;
+            background-color: rgb(236, 236, 236);
+            padding: 20px 50px;
+            margin: 10vh auto 20vh auto;
+            border-radius: 5px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        button {
+            width: 100px;
+            padding: 5px 30px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-right: 20px;
+            font-weight: 800;
+            border: none;
+        }
+
+        #username,
+        #email,
+        #password {
+            width: 80%;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <form action="#" id="name" name="formm">
+                <h1 style="text-align: center; font-size: 20px; font-weight: 600;">Registration</h1>
+                <div class="input-control">
+                    <label for="username">Username :</label><br>
+                    <input type="text" name="username" id="username" placeholder="username">
+                    <div style="margin-left: 10px; margin-bottom: 15px;" id="message"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="email">Email :</label><br>
+                    <input type="text" name="email" id="email" placeholder="your email">
+                    <div style="margin-left: 10px; margin-bottom: 15px;" id="emailMessage"></div>
+                </div>
+
+                <div class="input-control">
+                    <label for="password">Password :</label><br>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <div style="margin-left: 10px; margin-bottom: 15px;" id="passMessage"></div>
+                </div><br>
+                <div>
+                    <label for="round">Round :</label>
+                    <select name="round" id="round">
+                        <option value="59">59</option>
+                        <option value="60">60</option>
+                        <option value="61">61</option>
+                        <option value="62">62</option>
+                        <option value="63">63</option>
+                    </select>
+                </div><br>
+                <div>
+                    <label for="gender">Gender :</label>
+                    <input type="radio" name="gen" id="" value="Male">Male
+                    <input type="radio" name="gen" id="" value="Female">Female
+                </div>
+                <div><br>
+                    <label for="certificate">Cartificate :</label>
+                    <input type="checkbox" name="edu" id="" value="SSC">SSC
+                    <input type="checkbox" name="edu" id="" value="DIPLOMA">DIPLOMA
+                </div><br>
+                <div>
+                    <button style="background-color: teal;" type="submit" id="submit">Submit</button>
+                    <button style="background-color: yellowgreen;" type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script src="main2.js"></script>
+</body>
+
+</html>
