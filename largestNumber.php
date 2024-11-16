@@ -24,16 +24,29 @@
 
 <?php
 // Check if the form is submitted
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get the numbers from the form
-    $num1 = $_POST['num1'];
-    $num2 = $_POST['num2'];
-    $num3 = $_POST['num3'];
+// if ($_SERVER["REQUEST_METHOD"] == "POST") {
+//     // Get the numbers from the form
+//     $num1 = $_POST['num1'];
+//     $num2 = $_POST['num2'];
+//     $num3 = $_POST['num3'];
 
-    // Find the largest number
-    $largest = max($num1, $num2, $num3);
+//     // Find the largest number
+//     $largest = max($num1, $num2, $num3);
 
-    echo "<h3>$num1 , $num2 and $num3 .The largest number is: $largest</h3>";
+//     echo "<h3>$num1 , $num2 and $num3 .The largest number is: $largest</h3>";
+// }
+if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $number1 = $_POST['num1'];
+    $number2 = $_POST['num2'];
+    $number3 = $_POST['num3'];
+
+    if($number1>$number2 && $number1>$number3){
+        echo "$number1 , $number2 and $number3 . Largest number is $number1";
+    }elseif($number2>$number1 && $number2>$number3){
+        echo "$number1 , $number2 and $number3 . Largest number is $number2";
+    }else{
+        echo "$number1 , $number2 and $number3 . Largest number is $number3";
+    }
 }
 ?>
 
