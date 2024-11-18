@@ -2,6 +2,8 @@
      include("common_file/header.php")
 ?>
   
+<?php
+echo<<<START
   <!-- Contact Section -->
   <section class="contact-section bg-light py-4">
     <div class="container">
@@ -45,6 +47,8 @@
       </div>
     </div>
   </section>
+  START;
+?>
 
   <?php 
      include("common_file/footer.php")
