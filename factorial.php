@@ -10,7 +10,7 @@
         <form action="" method="POST">
         <label for="Factorial Number :">Factorial Number :</label>
         <input type="number" id="num1" name="num1" required><br><br>
-        <input type="submit" value="check prime">
+        <input type="submit" value="Get Factorial">
         </form>
     </section>
 
