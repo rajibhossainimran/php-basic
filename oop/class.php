@@ -1,11 +1,11 @@
 <?php 
 // create  a class and set their value and property  
 class Car{
-    public $name = "BMW";
+    public $name ;
     public $model ="b2123";
     public $color ="black";
-    function info(){
-        return "This is a race car";
+    function info($bname){
+        return $this->name = $bname;
     }
 
 }
@@ -21,7 +21,7 @@ echo $my_car ->color;
 
 echo "<br><br>";
 // call the function inside the class 
-echo $my_car ->info();
+echo $my_car->info("Audi auto");
 
 // Create a dynamic class
 class Bike {
@@ -37,7 +37,7 @@ class Bike {
 
     // Method to get the name and color (return the values)
     function get_name() {
-        return "Name: " . $this->name . ", Color: " . $this->color;
+        return "<br><br> Name:<br>" . $this->name . ", Color: <br>" . $this->color;
     }
 }
 
