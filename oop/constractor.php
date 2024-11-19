@@ -5,7 +5,7 @@ class Car {
     public $model="01";
 
     function __destruct(){
-        echo "bye bye";
+        // echo "bye bye";
     }
 
     function info(){
@@ -29,13 +29,25 @@ class Bike extends Car{
         echo "this is chile method <br>";
     }
     function __construct(){
-        
+
     }
 }
 
 $bikeObj = new Bike();
-$bikeObj->details();
-echo $bikeObj->color;
+// $bikeObj->details();
+// echo $bikeObj->color;
 // echo $bikeObj->name;
 
+
+if ($bikeObj instanceof Bike) {
+    echo "This is a Car object.";  // Output: This is a Car object.
+} else {
+    echo "This is not a Car object.";
+}
+
+echo"<br>";
+// check the object have or not in the class outpur true or false
+var_dump($bikeObj instanceof Student);
+echo "<br>";
+var_dump(method_exists($bikeObj,"details"))
 ?>
