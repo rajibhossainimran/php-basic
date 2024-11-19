@@ -49,5 +49,5 @@ echo"<br>";
 // check the object have or not in the class outpur true or false
 var_dump($bikeObj instanceof Student);
 echo "<br>";
-var_dump(method_exists($bikeObj,"details"))
+var_dump(method_exists($bikeObj,'$color'))
 ?>
