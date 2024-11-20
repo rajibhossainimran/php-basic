@@ -7,7 +7,7 @@ abstract class Animal {
     
     // Regular method (with implementation)
     public function sleep() {
-        echo "The animal is sleeping.\n";
+        echo "The animal is sleeping.<br>";
     }
 }
 
@@ -15,7 +15,7 @@ abstract class Animal {
 class Dog extends Animal {
     // Implementing the abstract method
     public function sound() {
-        echo "Bark!\n";
+        echo "Bark! dog Bark <br>";
     }
 }
 
@@ -23,19 +23,27 @@ class Dog extends Animal {
 class Cat extends Animal {
     // Implementing the abstract method
     public function sound() {
-        echo "Meow!\n";
+        echo "Meow!<br>";
     }
 }
 
 // Create objects of Dog and Cat classes
-$dog = new Dog();
-$cat = new Cat();
+// $dog = new Dog();
+// $cat = new Cat();
 
 // Call methods
-$dog->sound();  // Output: Bark!
-$dog->sleep();  // Output: The animal is sleeping.
-$cat->sound();  // Output: Meow!
-$cat->sleep();  // Output: The animal is sleeping.
+// $dog->sound();  // Output: Bark!
+// $dog->sleep();  // Output: The animal is sleeping.
+// $cat->sound();  // Output: Meow!
+// $cat->sleep();  // Output: The animal is sleeping.
+
+$dog = new Dog();
+$dog->sound();
+$dog->sleep();
+
+$car= new Cat();
+$car->sound();
+$car->sleep();
 
 
 ?>
