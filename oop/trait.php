@@ -6,8 +6,9 @@ trait message1 {
 }
 
 trait message2 {
+    public $food="Birani <br>";
   public function msg2() {
-    echo "OOP reduces code duplication!";
+    echo "OOP reduces code duplication! <br>";
   }
 }
 
@@ -23,4 +24,5 @@ class Display {
 $obj2 = new Display();
 $obj2->msg1();
 $obj2->msg2();
+echo $obj2->food;
 ?>
