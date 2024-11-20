@@ -1,26 +1,26 @@
 <?php
-
-trait TraitOne {
-    public function saySomething() {
-        echo "Hello from TraitOne\n";
-    }
+trait message1 {
+  public function msg1() {
+    echo "OOP is fun! <br>";
+  }
 }
 
-trait TraitTwo {
-    public function saySomething() {
-        echo "Hello from TraitTwo\n";
-    }
+trait message2 {
+  public function msg2() {
+    echo "OOP reduces code duplication!";
+  }
 }
 
-class MyClass {
-    use TraitOne, TraitTwo {
-        TraitTwo::saySomething insteadof TraitOne;  // Use saySomething from TraitTwo
-        TraitOne::saySomething as sayFromTraitOne;   // Alias TraitOne's saySomething
-    }
+
+class Display {
+  use message1, message2;
 }
 
-$obj = new MyClass();
-$obj->saySomething();  // Output: Hello from TraitTwo
-$obj->sayFromTraitOne();  // Output: Hello from TraitOne
+// $obj = new Welcome();
+// $obj->msg1();
+// echo "<br>";
 
+$obj2 = new Display();
+$obj2->msg1();
+$obj2->msg2();
 ?>
