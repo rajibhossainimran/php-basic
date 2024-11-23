@@ -8,7 +8,7 @@ if(isset($_POST["btnSubmit"])){
 	$name=$_POST["txtName"];
 
 
-		$student=new Student($id,$name); 	
+		$student=new ChildrenStudent($id,$name); 	
 		$student->save();
 		echo "Success!";
 }
@@ -37,7 +37,7 @@ if(isset($_POST["btnSubmit"])){
 	</div>
 </form>
 <?php
- Student::display_students();
+ ChildrenStudent::display_students();
 ?>
 </body>
 </html>
