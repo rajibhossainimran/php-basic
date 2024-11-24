@@ -63,9 +63,8 @@ class ChildrenStudent extends Student{
          
      
     }   
-    //The explode() function breaks a string into an array.
-   //The list() function is used to assign values to a list of variables in one operation.
- //-----------------end functions----------------   
+
+    
 }
 
 ?>
