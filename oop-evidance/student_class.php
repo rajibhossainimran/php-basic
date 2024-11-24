@@ -8,10 +8,7 @@ class Student{
 	   $this->id=$_id;
 	
    }
-}// Student class
-
-
-
+}
 
 // inheritance / create a new class 
 class ChildrenStudent extends Student{
@@ -29,7 +26,7 @@ class ChildrenStudent extends Student{
 
   //---------------csv function-------------------//
    public function csv(){
-    return $this->id.",".$this->name.PHP_EOL;  //End Of Line or create new line 
+    return $this->id.",".$this->name.PHP_EOL;  //End Of Line
     }
     
     //-----------save function-----------------//
