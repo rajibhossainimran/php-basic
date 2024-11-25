@@ -1,3 +1,19 @@
+<?php
+
+session_start();
+if(!isset($_SESSION['myName'])){
+    header("location:login.php");
+}
+
+
+
+// logout.php
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,6 +75,11 @@
     .logout-button:hover {
       background-color: #e53935;
     }
+    a {
+    text-decoration: none;  /* Removes underline from navigation links */
+    color: #333;  /* Set link color */
+    
+  }
   </style>
 </head>
 <body>
@@ -68,9 +89,9 @@
   </div>
 
   <div class="content">
-    <h2>Hello, [Username]!</h2>
+    <h2>Hello, Username!</h2>
     <p>Welcome to your dashboard. Here, you can manage your settings, view your activity, and more.</p>
-    <button class="logout-button" onclick="window.location.href='login.html'">Logout</button>
+    <button class="logout-button" ><a href="logout.php">LOGOUT</a></button>
   </div>
 
 </body>

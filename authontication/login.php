@@ -1,5 +1,19 @@
 
+<?php
+session_start();
+if(isset($_POST["btnSubmit"])){
+    $username=$_POST["username"];
+    $password=$_POST["password"];
+    if($username=="admin" && $password == "123"){
+        $_SESSION['myName']=$username;
+        header("location:dashboard.php");
+    }else{
+        $msg ="Username or Password is incorrect !";
+    }
+}
 
+
+?>
 
 
 <!DOCTYPE html>
@@ -120,10 +134,14 @@
         <input type="password" id="password" name="password" placeholder="Enter your password" required>
       </div>
 
-      <button type="submit" class="login-button">Login</button>
+      <button type="submit" name="btnSubmit" class="login-button">Login</button>
       
       <a href="#" class="forgot-password">Forgot your password?</a>
     </form>
+    <?php
+    echo isset($msg)?$msg:"";
+    
+    ?>
   </div>
 
 </body>
