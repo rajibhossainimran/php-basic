@@ -33,7 +33,7 @@ class ChildrenStudent extends Student{
     public function save(){
       
           // $students=file(self::$file_path);  	   
-          $students=file("data.txt");  	
+          // $students=file("data.txt");  	
           // print_r($students);   
 
         // file_put_contents(self::$file_path,$this->csv(),FILE_APPEND);
@@ -52,11 +52,15 @@ class ChildrenStudent extends Student{
       //  $students=file(self::$file_path);
        $students=file("data.txt");
      
-     echo "<b>ID | Name</b><br/>";
-     foreach($students as $student){
-            list($id,$name)=explode(",",trim($student));
-            echo "$id | $name<br/>";   
+       echo "<table border='1' cellpadding='5' cellspacing='0'>";
+       echo "<tr><th>ID</th><th>Name</th></tr>"; // Table headers
+       
+       foreach ($students as $student) {
+           list($id, $name) = explode(",", trim($student));
+           echo "<tr><td>$id</td><td>$name</td></tr>"; // Table rows for each student
        }
+       
+       echo "</table>";
          
      
     }   
