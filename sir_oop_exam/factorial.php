@@ -16,27 +16,21 @@
 <body>
     <section>
         <form action="" method="post">
-            <label for="number1">Number 1 :</label>
+            <label for="number1">Input Factorial Number :</label>
             <input type="number" name="num1" require><br><br>
-
-            <label for="number2">Number 2 :</label>
-            <input type="number" name="num2" require><br><br>
-
-            <label for="number3">Number 3 :</label>
-            <input type="number" name="num3" require><br><br>
-            <button type="submit">Submit</button>
+            <button type="submit">Get Factorial</button>
         </form>
     </section>
 
     <?php
     
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $num1=$_POST['num1'];
-        $num2=$_POST['num2'];
-        $num3=$_POST['num3'];
-
-        $largest = max($num1,$num2,$num3);
-        echo"Numbers $num1 ,$num2 and $num3 . Largest number is $largest";
+        $num=$_POST['num1'];
+        $fac=1;
+        for($i=1;$i<=$num;$i++){
+            $fac=$fac*$i;
+        }
+        echo "Input number is $num . Factorial result is $fac";
     }
     
     ?>

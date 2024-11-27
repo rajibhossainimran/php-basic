@@ -14,8 +14,6 @@
         </form>
     </section>
 
-
-
     <?php
     
     $number = $_POST['num1'];
@@ -24,7 +22,7 @@
     for($i =1; $i<=$number; $i++){
         $factorial = $factorial*$i;
     }
-    echo "The factorial of $number is $factorial.";
+    echo "The factorial of $number is $factorial .";
     
     ?>
 </body>
