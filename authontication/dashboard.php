@@ -11,9 +11,6 @@ if(!isset($_SESSION['myName'])){
 
 
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
