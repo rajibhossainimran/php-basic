@@ -51,3 +51,16 @@ if (isset($_POST["upload"])) {
     </section>
 </body>
 </html>
+<?php
+// Display all uploaded images from the "uploads" directory
+$imgLocation = "uploads/";
+$images = glob($imgLocation . "*.{jpg,jpeg,png,gif}", GLOB_BRACE);
+
+if (count($images) > 0) {
+    foreach ($images as $image) {
+        echo '<img src="' . $image . '" alt="Uploaded Image">';
+    }
+} else {
+    echo "No images uploaded yet.";
+}
+?>
