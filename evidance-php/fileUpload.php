@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 if (isset($_POST["upload"])) {
     if (isset($_FILES["myFile"])) {

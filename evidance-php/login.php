@@ -1,4 +1,5 @@
 <?php 
+session_start();
 
 if(isset($_POST["btnLogin"])){
     $mail = $_POST["email"];
@@ -50,5 +51,16 @@ if(isset($_POST["btnLogin"])){
             ?>
         </form>
     </section>
+    <table>
+        <tr>
+            <th>rajib@gmail.com</th>
+            <th>imran@gmail.com</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td>3456</td>
+        </tr>
+        
+    </table>
 </body>
 </html>
