@@ -42,8 +42,12 @@ if (isset($_POST["upload"])) {
     <title>File Upload</title>
 </head>
 <body>
+    <div>
+        <a href="logout.php">LOGOUT</a>
+    </div>
     <section>
         <h1>file upload dashboard</h1>
+
         <form action="" method="post" enctype="multipart/form-data">
             <label for="file">Uplaod file</label><br><br>
             <input type="file" name="myFile"><br><br>
